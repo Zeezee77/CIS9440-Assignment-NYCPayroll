@@ -13,9 +13,21 @@ Contains detailed payroll payment records by employee, agency, and fiscal year.
 | employee_name | Full name (First + Middle + Last) | TEXT | ALEXIS MAJOR |
 
 **Dimensions:**
-- **Agency Dimension:** agency_name, related attributes  
-- **Employee Dimension:** employee_name, title_description  
-- **Time Dimension:** fiscal_year  
 
-**Grain:**  
-Each record in the fact table represents one employee’s payroll record for one fiscal year.
+| **Dimension** | **Key Attributes** | **Description** |
+|----------------|--------------------|-----------------|
+| **Agency Dimension** | `agency_name` | Contains agency details such as name and related attributes |
+| **Employee Dimension** | `employee_name`, `title_description` | Represents unique employees and their job titles |
+| **Time Dimension** | `fiscal_year` | Represents fiscal year for payroll data |
+
+---
+
+### **Grain**
+Each record in the fact table represents **one employee’s payroll record for one fiscal year**.
+
+---
+
+### **Notes**
+- **Data Source:** [NYC Open Data – Citywide Payroll Data (Fiscal Year)](https://data.cityofnewyork.us/resource/k397-673e.json)
+- **Agency Filter:** HRA/Dept of Social Services  
+- **Fiscal Year:** 2025
