@@ -33,9 +33,6 @@ CREATE TABLE nyc_payroll_dw.dim_time (
     fiscal_year INT
 );
 
--- ====================
--- Fact Table
--- ====================
 
 CREATE TABLE nyc_payroll_dw.fact_payroll (
     fact_id SERIAL PRIMARY KEY,

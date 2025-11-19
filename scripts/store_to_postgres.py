@@ -1,8 +1,9 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import os
 
 DB_USER = "postgres"          
-DB_PASSWORD = "Withtheclouds7"   
+DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password_here_if_local")
 DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "nyc_payroll_db"
