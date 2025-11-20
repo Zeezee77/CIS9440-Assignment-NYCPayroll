@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 import os
 
 DB_USER = "postgres"          
-DB_PASSWORD = os.getenv("DB_PASSWORD", "Withtheclouds7")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_HOST = "127.0.0.1"     
 DB_PORT = "5432"
 DB_NAME = "nyc_payroll_db"
