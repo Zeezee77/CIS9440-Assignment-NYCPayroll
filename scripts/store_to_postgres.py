@@ -3,8 +3,8 @@ from sqlalchemy import create_engine
 import os
 
 DB_USER = "postgres"          
-DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password_here_if_local")
-DB_HOST = "localhost"
+DB_PASSWORD = os.getenv("DB_PASSWORD", "Withtheclouds7")
+DB_HOST = "127.0.0.1"     
 DB_PORT = "5432"
 DB_NAME = "nyc_payroll_db"
 
@@ -15,7 +15,6 @@ print("✅ Connected to PostgreSQL!")
 try:
     df = pd.read_json("raw/nyc_payroll_2025-11-18.json")
 except ValueError:
-    
     df = pd.read_csv("docs/NYC_Payroll_2025.csv")
 
 print(f"📄 Loaded {len(df)} rows from file")
